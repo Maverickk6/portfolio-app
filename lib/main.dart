@@ -48,25 +48,29 @@ class MyApp extends StatelessWidget {
                           style: TextStyle(fontSize: 16)),
                       Text('Uyo, Akwa Ibom state.',
                           style: TextStyle(fontSize: 16)),
-                      Text('09066898689', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                      Text('09066898689',
+                          style: TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.bold)),
                     ],
                   ),
                 )
               ],
             ),
             Container(
-                margin: EdgeInsets.only(top: 10.0),
-                padding: EdgeInsets.all(8.0),
-                child: Center(
-                  child: Text(
-                    'Check out my profile and works on',
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
+              margin: EdgeInsets.only(top: 10.0),
+              padding: EdgeInsets.all(8.0),
+              child: Center(
+                child: Text(
+                  'Check out my profile and works on',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
                   ),
-                )),
-            AboutSection('Github', '@maverickk6'),
+                ),
+              ),
+            ),
+            Divider(color: Colors.white, thickness: 2.0, indent: 80.0, endIndent: 80.0, height: 30.0),
+            AboutSection('GITHUB', '@maverickk6'),
             AboutSection('LINKED-IN', 'linkedin.com/in/ekpo-edidiong-46607b69'),
             AboutSection('TWITTER', '@eddymav')
           ]),
@@ -97,8 +101,20 @@ class AboutSection extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Center(child: Text(platform, style: TextStyle(fontSize: 16))),
-          Center(child: Text(link, style: TextStyle(fontSize: 16)))
+          Center(
+            child: Text(
+              platform,
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+          ),
+          Center(
+            child: Text(
+              link,
+              style: TextStyle(
+                fontSize: 16,
+              ),
+            ),
+          ),
         ],
       ),
     );
