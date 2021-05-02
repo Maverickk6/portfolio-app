@@ -44,75 +44,62 @@ class MyApp extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text('Edidiong Ekpo', style: TextStyle(fontSize: 22)),
-                      Text('Mobile Developer at', style: TextStyle(fontSize: 16)),
+                      Text('Mobile Developer at',
+                          style: TextStyle(fontSize: 16)),
                       Text('Uyo, Akwa Ibom state.',
                           style: TextStyle(fontSize: 16)),
-                          Text('09066898689',
-                          style: TextStyle(fontSize: 16)),
+                      Text('09066898689', style: TextStyle(fontSize: 16)),
                     ],
                   ),
                 )
               ],
             ),
             Container(
-              margin: EdgeInsets.only( top: 10.0),
-              padding: EdgeInsets.all( 8.0),
+                margin: EdgeInsets.only(top: 10.0),
+                padding: EdgeInsets.all(8.0),
                 child: Center(
                   child: Text(
-              'Check out my profile and works on:',
-              style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-              ),
-            ),
+                    'Check out my profile and works on:',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 )),
-            Container(
-              margin: EdgeInsets.all(10.0),
-              width: 400,
-              height: 100,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12.0),
-                  border: Border.all(width: 3, color: Colors.white)),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Center(child: Text('GITHUB', style: TextStyle(fontSize: 16))),
-                  Center(child: Text('@maverickk6', style: TextStyle(fontSize: 16)))
-                ],
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.all(10.0),
-              width: 400,
-              height: 100,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12.0),
-                  border: Border.all(width: 3, color: Colors.white)),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Center(child: Text('LINKED-IN', style: TextStyle(fontSize: 16))),
-                  Center(child: Text('linkedin.com/in/ekpo-edidiong-46607b69', style: TextStyle(fontSize: 16)))
-                ],
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.all(10.0),
-              width: 400,
-              height: 100,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12.0),
-                  border: Border.all(width: 3, color: Colors.white)),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Center(child: Text('TWITTER', style: TextStyle(fontSize: 16))),
-                  Center(child: Text('@eddymav', style: TextStyle(fontSize: 16)))
-                ],
-              ),
-            ),
+            AboutSection('Github', '@maverickk6'),
+            AboutSection('LINKED-IN', 'linkedin.com/in/ekpo-edidiong-46607b69'),
+            AboutSection('TWITTER', '@eddymav')
           ]),
         ),
+      ),
+    );
+  }
+}
+
+class AboutSection extends StatelessWidget {
+  final String platform;
+  final String link;
+
+  const AboutSection(
+    this.platform,
+    this.link,
+  );
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.all(10.0),
+      width: 400,
+      height: 100,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12.0),
+          border: Border.all(width: 3, color: Colors.white)),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(child: Text(platform, style: TextStyle(fontSize: 16))),
+          Center(child: Text(link, style: TextStyle(fontSize: 16)))
+        ],
       ),
     );
   }
