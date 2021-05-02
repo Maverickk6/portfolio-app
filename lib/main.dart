@@ -43,12 +43,12 @@ class MyApp extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Edidiong Ekpo', style: TextStyle(fontSize: 22)),
+                      Text('EDIDIONG EKPO', style: TextStyle(fontSize: 22)),
                       Text('Mobile Developer at',
                           style: TextStyle(fontSize: 16)),
                       Text('Uyo, Akwa Ibom state.',
                           style: TextStyle(fontSize: 16)),
-                      Text('09066898689', style: TextStyle(fontSize: 16)),
+                      Text('09066898689', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
                     ],
                   ),
                 )
@@ -59,7 +59,7 @@ class MyApp extends StatelessWidget {
                 padding: EdgeInsets.all(8.0),
                 child: Center(
                   child: Text(
-                    'Check out my profile and works on:',
+                    'Check out my profile and works on',
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
